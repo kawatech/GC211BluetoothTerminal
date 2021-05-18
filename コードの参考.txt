@@ -1,0 +1,81 @@
+ <Button
+                android:id="@+id/backr_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+
+                android:text="BACK" />
+                
+                
+                
+<Button
+                android:id="@+id/start_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="left"
+                android:text="START"/>
+
+            <Button
+                android:id="@+id/save_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="left"
+                android:text="SAVE"/>   
+                
+                
+                
+                
+ そのボタンを呼び出す      onCreate()の中に置く         
+  start_btn.setOnClickListener() {
+  }             
+  
+  
+  val btnVer = findViewById<Button>(R.id.ver_btn)
+        btnVer!!.setOnClickListener() {
+        }
+  
+  
+  
+  
+   //ハンドラを生成
+        mHandler = Handler()
+        val buttonSave = findViewById<Button>(R.id.save_btn)
+
+        //ProgressDialogを生成します。
+        progressDialog = ProgressDialog(this)
+        progressDialog!!.setMessage("Saving")
+
+        //buttonがクリックされた時の処理を登録します。
+        buttonSave!!.setOnClickListener { buttonProcess() }
+        
+        
+        
+        
+        
+XML
+
+android:inputType="textCapCharacters"
+
+
+
+https://www.it-swarm-ja.com/ja/android/android-edittext%e3%81%a7%e3%80%81%e5%a4%a7%e6%96%87%e5%ad%97%e3%82%92%e5%bc%b7%e5%88%b6%e7%9a%84%e3%81%ab%e6%9b%b8%e3%81%8d%e8%be%bc%e3%82%80%e6%96%b9%e6%b3%95/1072184281/
+
+EditTextでAndroid:textAllCaps="true"
+
+android:textAllCaps="true"
+＝＞これがると、エディットテキストに表示されない。送信するとアプリが停止する。だめ～～～～
+
+プロパティをxmlファイルに追加できます。これにより、ソフト入力キーボードがすべて大文字モードで表示されます。入力した値は大文字で表示されます。ただし、これは、ユーザーがUpperCase文字でのみ入力できることを保証するものではありません。必要に応じて、小文字に戻すことができます。 Edittextの出力がすべて大文字であることを確認する場合は、StringクラスのtoUpperCase()メソッドを使用して入力文字列を手動で変換する必要があります。
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
